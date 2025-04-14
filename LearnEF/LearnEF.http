@@ -1,0 +1,31 @@
+@LearnEF_HostAddress = http://localhost:5194/api/v1
+
+GET {{LearnEF_HostAddress}}/posts
+Accept: application/json
+
+###
+POST {{LearnEF_HostAddress}}/posts
+Content-Type: application/json
+
+{
+    "message": "Post message 1",
+    "comments": [
+        {
+            "message": "Comment message 1"
+        }
+    ]
+}
+
+###
+PUT {{LearnEF_HostAddress}}/posts/1
+Content-Type: application/json
+
+{
+    "message": "Post message 1",
+    "comments": [
+        {
+            "id": 5,
+            "message": "Comment message 5"
+        }
+    ]
+}
